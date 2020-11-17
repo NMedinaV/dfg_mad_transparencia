@@ -9,7 +9,7 @@ def load_data(path_to_data='../data', fecha_publicacion='*', seccion='*', subsec
     lines = []
     for file in filelist:
         if os.path.isfile(file):
-            with open(f'../data/{file}', 'r') as line:
+            with open(f'{file}', 'r') as line:
                 line_str = line.read()
                 json_line = json.loads(line_str)
                 lines.append(json_line)
